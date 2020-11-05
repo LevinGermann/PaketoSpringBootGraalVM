@@ -1,0 +1,12 @@
+description = "Levin: A sample Builder for using Java Native Image"
+[[buildpacks]]
+  id = "paketo-buildpacks/java-native-image"
+  image = "gcr.io/paketo-buildpacks/java-native-image:4.0.0"
+[[order]]
+group = [
+    { id = "paketo-buildpacks/java-native-image", version="4.0.0"},
+]
+[stack]
+  id = "io.buildpacks.stacks.bionic"
+  build-image = "gcr.io/paketo-buildpacks/build:base-cnb"
+  run-image = "gcr.io/paketo-buildpacks/run:base-cnb"
